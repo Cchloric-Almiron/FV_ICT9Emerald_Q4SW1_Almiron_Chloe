@@ -16,22 +16,28 @@
         <h1>Welcome back!</h1>
         <h2>Login to continue</h2>
  
+    
     <form>
     <label form="user">Username</label>
-    <br><br>
+    <br>
         <input type="text" id="user" class="form-control" placeholder="Input your username" required>
     
-    <br><hr><br>
+    <br><br>
 
     <label form="pass">Password</label>
-    <br><br>
+    <br>
         <input type="password" id="pass" class="form-control" placeholder="Input your password" required>
     </form>
 
-    <input type="checkbox" class="form-check-input" id="checklog" name="checklog" value="checked" >
-    <label class="form-check-label" for="checklog" >Stay Logged in</label>
-    <h6>Forgot Password?</h6>
+    <br>
+    <div class="d-flex gap-2 justify-content-between">
+        <input type="checkbox" class="form-check-input" id="checklog" name="checklog" value="checked" >
+
+        <label class="form-check-label" for="checklog" >Stay Logged in</label>
+
+    <a href="#">Forgot Password?<a>
     
+
     <button class=" btn btn-info" onclick="log()" type="submit">Login</button> 
 
     <script>
@@ -59,9 +65,7 @@
             alert("Please inout a valid login");
          }
         
-        let checkbox= document.getElementById("checklog").checked; 
-
-        switch(true) {
+        switch(checkbox) {
             case true:
             message = "Your session will stay active on this device";
             break;
