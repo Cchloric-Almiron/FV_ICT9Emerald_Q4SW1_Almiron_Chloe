@@ -12,30 +12,70 @@
         background-image:url('https://i.pinimg.com/originals/53/7b/1b/537b1b9106f53b36d5cb6b92d3ed6158.gif');
         background-repeat:no-repeat;
         background-size:cover;
-        width:500px;
-        height:600px;
         }
 
         #Loginbox{
         text-align:center;
-        background-color:rgba(255, 192, 203, 0.523);
-        box-shadow:40%;
+        background-color:rgba(255, 192, 203, 0.621);
+        box-shadow:10px 20px 11px rgb(209, 87, 130);
+        width:450px;
+        height:650px;
+        padding:50px;
+        border-radius:50px;
+        margin-top:100px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
+
+        #google{
+            width:300px;
+            height:35px;
+            background-color:rgba(255, 184, 198, 0.84);
+            border-radius:30px;
+        }
+
+        #apple{
+            width:300px;
+            height:35px;
+            background-color:rgba(255, 184, 198, 0.84);
+            border-radius:30px;
+            margin-top:5px;
+        }
+
+        #loginbutton{
+            width:300px;
+            height:35px;
+            border-radius:30px;
+            background-color:rgba(255, 184, 198, 0.84);
+        }
+
+
 
      </style>
 </head>
 <body>
-
+<center>
     <div id="Loginbox">
         <h1>Welcome back!</h1>
         <h2>Login to continue</h2>
+
+    <br>
+
+    <button id="google" class="btn"><img src="https://scontent-sea5-1.xx.fbcdn.net/v/t1.15752-9/653935151_1946547739563572_2792685723924832732_n.png?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=rxNPQ_V23rEQ7kNvwHtm27x&_nc_oc=AdrUsaKvg5QemR21wy2wNTORjLReNMZ6lpM3b701taJEC8fDjLvMF_lGZierOBUZZiotumVsRR9qW9oskaYV75_a&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sea5-1.xx&_nc_ss=7a32e&oh=03_Q7cD4wFkso0D0q3GT4rFg8gVFcSBxyR8rwBJwyNKoVbU9_HPMg&oe=69EC788B"style="height:20px; margin-bottom:3px;">  Login with Google</button>
+
+    <br>
+
+    <button id="apple" class="btn"><img src="https://scontent.fmnl4-1.fna.fbcdn.net/v/t1.15752-9/652605566_2015423556078003_4795187742804932028_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=TFV0e8YTGI0Q7kNvwFE3pIQ&_nc_oc=AdoMVLTslhoLNPGnD717n8Be5x0osgyYdCfxNhQmpkgutmfKaO7eFXjqBA8TAdvuOlU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl4-1.fna&_nc_ss=7a32e&oh=03_Q7cD4wHDkiy1rvCCF42B1h4GbmmU5GaPlPSlEE6GMUo8jj96gw&oe=69EC702C"style="height:20px; margin-bottom:3px;">  Login with Apple</button>
+
+    <br><hr>
+    <h6>OR</h6>
+    <hr>
 
     <form>
     <label form="user">Username</label>
     <br>
         <input type="text" id="user" class="form-control" placeholder="Input your username" required>
     
-    <br><br>
+    <br>
 
     <label form="pass">Password</label>
     <br>
@@ -43,15 +83,16 @@
     </form>
 
     <br>
+    <div class="d-flex gap-4">
         <input type="checkbox" class="form-check-input" id="checkbox" name="checkbox" value="checked" >
 
         <label class="form-check-label" for="checklog" >Stay Logged in</label>
 
-    <a href="#">Forgot Password?<a>
-    
+        <a href="#">Forgot Password?<a>
+    </div>
+
     <br>
-    
-    <button class="btn btn-" onclick="log()" type="submit">Login</button> 
+    <button class="btn" id="loginbutton" onclick="log()" type="submit">Login</button> 
 
     <script>
 
@@ -74,9 +115,6 @@
             alert("Username and Pasword do not match");
         }
 
-          else{
-            alert("Please input a valid login");
-         }
 
          switch(checkbox) {
             case true:
@@ -90,10 +128,16 @@
             default:
             message ="";
             }
-}
-</script>
+            
+        else{
+            alert("Please input a valid login");
+         }
+
+        
+    }
+    </script>
 
     </div>
-    
+</center>
 </body>
 </html>
