@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q4 SW1</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
      <style>
+
+        body{
+        background-image:url('https://i.pinimg.com/originals/53/7b/1b/537b1b9106f53b36d5cb6b92d3ed6158.gif');
+        background-repeat:no-repeat;
+        background-size:cover;
+        width:500px;
+        height:600px;
+        }
+
+        #Loginbox{
+        text-align:center;
+        background-color:rgba(255, 192, 203, 0.523);
+        box-shadow:40%;
+        }
 
      </style>
 </head>
 <body>
 
-    <div id="">
+    <div id="Loginbox">
         <h1>Welcome back!</h1>
         <h2>Login to continue</h2>
- 
-    
+
     <form>
     <label form="user">Username</label>
     <br>
@@ -30,15 +43,15 @@
     </form>
 
     <br>
-    <div class="d-flex gap-2 justify-content-between">
-        <input type="checkbox" class="form-check-input" id="checklog" name="checklog" value="checked" >
+        <input type="checkbox" class="form-check-input" id="checkbox" name="checkbox" value="checked" >
 
         <label class="form-check-label" for="checklog" >Stay Logged in</label>
 
     <a href="#">Forgot Password?<a>
     
-
-    <button class=" btn btn-info" onclick="log()" type="submit">Login</button> 
+    <br>
+    
+    <button class="btn btn-" onclick="log()" type="submit">Login</button> 
 
     <script>
 
@@ -46,26 +59,26 @@
 
         var user = document.getElementById("user").value;
         var pass = document.getElementById("pass").value;
-        var checkbox = document.getElementByI("checklog").checked;
+        var checkbox = document.getElementById("checkbox").checked;
         var message = ""
 
         if(user === "" || pass === ""){
-            alert("Please input your username");
+            alert("Please input your user info");
             return;
         }
         if(user == "IloveICTOMG!" && pass == "ICT6767"){
             alert("Welcome back!");
         }
 
-        else if (user == "wrong username"  && pass =="wrong password"){
+        else if (user == "wrong username"  && pass =="wrong"){
             alert("Username and Pasword do not match");
         }
 
-         else{
-            alert("Please inout a valid login");
+          else{
+            alert("Please input a valid login");
          }
-        
-        switch(checkbox) {
+
+         switch(checkbox) {
             case true:
             message = "Your session will stay active on this device";
             break;
@@ -74,8 +87,9 @@
             message = "Session will timeout after closing"; 
             break;
 
- }
-
+            default:
+            message ="";
+            }
 }
 </script>
 
