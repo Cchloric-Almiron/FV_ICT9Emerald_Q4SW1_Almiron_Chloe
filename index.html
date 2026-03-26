@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 SW1</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+     <style>
+
+     </style>
+</head>
+<body>
+
+    <div id="">
+        <h1>Welcome back!</h1>
+        <h2>Login to continue</h2>
+ 
+    <form>
+    <label form="val1">Username</label>
+    <br><br>
+        <input type="value" id="user" class="form-control" placeholder="Input your username" required>
+    
+    <br><hr><br>
+
+    <label form="val1">Password</label>
+    <br><br>
+        <input type="value" id="pass" class="form-control" placeholder="Input your password" required>
+    </form>
+
+    <input type="checkbox" class="form-check-input" id="checklog" name="checklog" value="checked" >
+    <label class="form-check-label" for="checklog" >Stay Logged in</label>
+    
+    <button class=" btn btn-danger" onclick="log()" type="submit">Login</button> 
+
+    <script>
+
+    function log() {
+        let checkbox= document.getElementById("checklog").checked; 
+         //when checked, it reads true
+
+        switch(checklog) {
+            case true:
+            message= "Your session will stay active on this device";
+            break;
+
+            case false:
+            message = "Session timeout"; 
+            break;
+
+            //default may almost never needed since there is already true and false statement;
+ }
+
+}
+</script>
+
+    </div>
+    
+</body>
+</html>
