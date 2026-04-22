@@ -101,7 +101,7 @@
         var user = document.getElementById("user").value;
         var pass = document.getElementById("pass").value;
         var checkbox = document.getElementById("checkbox").checked;
-        var message = ""
+        var message ="";
 
         if(user === "" || pass === ""){
             alert("Please input your user info");
@@ -115,6 +115,9 @@
             alert("Username and Pasword do not match");
         }
 
+        else{
+            alert("Please input a valid login");
+         }
 
          switch(checkbox) {
             case true:
@@ -128,12 +131,8 @@
             default:
             message ="";
             }
-            
-        else{
-            alert("Please input a valid login");
-         }
 
-        
+            alert(message)
     }
     </script>
 
